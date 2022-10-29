@@ -1,0 +1,41 @@
+<div class="mt-2 form-container mat-elevation-z5">
+  <h1 style="text-align: center">New Request</h1>
+  <form class="mt-1" [formGroup]="requestForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="Created By" formControlName="createdBy" type="text" value="Your Name">
+      <mat-error *ngIf="requestForm.get('createdBy')?.hasError('required')">
+        An Adress is Required
+      </mat-error>
+      <mat-error *ngIf="requestForm.get('createdBy')?.hasError('pattern')">
+        You need a 43-digit address starting with '0x'
+      </mat-error>
+      <mat-icon matSuffix>send</mat-icon>
+      <mat-hint>Please add the hexadecimal address of the Sender.</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Recipient" formControlName="recipient">
+      <mat-error *ngIf="requestForm.get('recipient')?.hasError('required')">
+        An Adress is Required
+      </mat-error>
+      <mat-error *ngIf="requestForm.get('recipient')?.hasError('pattern')">
+        You need a 43-digit address starting with '0x'
+      </mat-error>
+      <mat-icon matSuffix>receipt</mat-icon>
+      <mat-hint>Please add the hexadecimal address of the Recipient.</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Please describe the transaction</mat-label>
+      <textarea matInput placeholder="Ex. MRI results of Patient George Vasilakis..."
+      formControlName="description"></textarea>
+      <mat-error *ngIf="requestForm.get('description')?.hasError('required')">
+        Please write some words for this request for future reference.
+      </mat-error>
+    </mat-form-field>
+    <div class="center mt-1">
+      <button mat-raised-button color="primary" type="submit" style="margin-top: 1vh;">
+        Create
+      </button>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,24 @@
+<h4>Campaigns' Menu</h4>
+<section class="grider" *ngIf="role">
+  <div class="button-row">
+    <div class="flex-container">
+      <div class="button-container" *ngIf="role === 'COA'">
+        <button class="measurements" mat-button type="button"
+        routerLink="/campaigns/new">
+          <mat-icon style="margin-right:1vw">create</mat-icon>
+          Create new Campaign
+          <mat-icon style="margin-left:1vw" class="actions">create</mat-icon>
+        </button>
+      </div>
+      <div class="button-container">
+        <button class="measurements" mat-button type="button"
+        routerLink="/campaigns/list">
+          <mat-icon style="margin-right:1vw">list</mat-icon>
+          List of Campaigns
+          <mat-icon style="margin-left:1vw" class="actions">list</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+

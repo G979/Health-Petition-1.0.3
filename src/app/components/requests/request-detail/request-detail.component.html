@@ -1,0 +1,88 @@
+<mat-nav-list class="detail-tbl" *ngIf="ready">
+  <mat-list-item>
+    <div class="col-6">
+      <h4>Name</h4>
+    </div>
+    <div class="col-6">
+      <h4>Value</h4>
+    </div>
+  </mat-list-item>
+  <mat-list-item>
+    <div class="col-6">
+      <p>Request ID</p>
+    </div>
+    <div class="col-6">
+      <p class="values">{{req.id}}</p>
+    </div>
+  </mat-list-item>
+  <mat-list-item>
+    <div class="col-6">
+      <p>Campaign ID</p>
+    </div>
+    <div class="col-6">
+      <p class="values">{{req.campaign}}</p>
+    </div>
+  </mat-list-item>
+  <mat-list-item>
+    <div class="col-6">
+      <p>Created By</p>
+    </div>
+    <div class="col-6">
+      <p class="values">{{req.createdBy}}</p>
+    </div>
+  </mat-list-item>
+  <mat-list-item>
+    <div class="col-6">
+      <p>Description</p>
+    </div>
+    <div class="col-6">
+      <p class="values">{{req.description}}</p>
+    </div>
+  </mat-list-item>
+  <mat-list-item>
+    <div class="col-6">
+      <p>Recipient</p>
+    </div>
+    <div class="col-6">
+      <p class="values">{{req.recipient}}</p>
+    </div>
+  </mat-list-item>
+  <mat-list-item>
+    <div class="col-6">
+      <p>Is It Finalised?</p>
+    </div>
+    <div class="col-6">
+      <p class="values">{{req.isFinalised ? 'Yes' : 'No'}}</p>
+    </div>
+  </mat-list-item>
+  <mat-list-item *ngIf="req.downloadUrl === '' ">
+    <div class="col-6">
+      <p>Action</p>
+    </div>
+    <div class="col-6 btns">
+      <div class="col-3 approveBtn"  *ngIf="role === 'COA' && this.req.isFinalised == false ">
+        <button class="measurements" mat-button type="button"
+        (click)="approveRequest()" >Approve</button>
+      </div>
+      <div class="col-3 deleteBtn" *ngIf="role === 'COA' && this.req.isFinalised == false ">
+        <button class="delete" mat-button type="button"
+        (click)="dismissRequest()" >Dismiss</button>
+      </div>
+      <upload-imager
+        *ngIf="req.createdBy === address && req.isFinalised"
+        [request] = "req">
+      </upload-imager>
+    </div>
+  </mat-list-item>
+  <mat-list-item *ngIf="req.downloadUrl !== '' && address === req.recipient">
+    <div class="col-6">
+      <p>Link to Image</p>
+    </div>
+    <div class="col-6">
+      <p>
+        <a href={{req.downloadUrl}}>Link to Your File</a>.
+      </p>
+    </div>
+  </mat-list-item>
+</mat-nav-list>
+

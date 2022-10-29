@@ -1,0 +1,17 @@
+<mat-list-item class="mt-4" *ngIf="reqInfo" (click)="onReqSelected()">
+  <div class="col-5">
+    <p>{{reqInfo.createdBy}}</p>
+  </div>
+  <div class="col-3">
+    <p>{{reqInfo.description}}</p>
+  </div>
+  <div class="col-5">
+    <p>{{reqInfo.recipient}}</p>
+  </div>
+</mat-list-item>
+<hr>
+<app-request-detail
+  *ngIf="itIsSelected"
+  [req]= "reqInfo">
+</app-request-detail>
+<hr>

@@ -1,0 +1,28 @@
+<div class="mt-2 form-container mat-elevation-z5">
+  <h1>New Campaign</h1>
+  <form class="mt-1" [formGroup]="campaignForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label for="address">Address</mat-label>
+      <input matInput placeholder="Address" formControlName="address">
+      <mat-error *ngIf="campaignForm.get('address')?.hasError('required')">
+        An Adress is Required
+      </mat-error>
+      <mat-error *ngIf="campaignForm.get('address')?.hasError('pattern')">
+        You need a 43-digit address starting with '0x'
+      </mat-error>
+      <mat-icon matSuffix>contact_mail</mat-icon>
+      <mat-hint>Please add the hexadecimal address of the Campaign in HC.</mat-hint>
+    </mat-form-field>
+    <mat-form-field class="mt-1">
+      <input matInput placeholder="Association" formControlName="patient">
+      <mat-label for="patient">Association</mat-label>
+      <mat-icon matSuffix>person_add</mat-icon>
+      <mat-hint>Please add patient involved in this campaign. <strong>E.g Georgios Vasilakis</strong></mat-hint>
+    </mat-form-field>
+    <div class="center mt-1">
+      <button mat-raised-button color="primary" type="submit" style="margin-top: 1vh;">
+        Create
+      </button>
+    </div>
+  </form>
+</div>

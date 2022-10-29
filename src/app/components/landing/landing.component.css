@@ -1,0 +1,42 @@
+.grider {
+  box-shadow: 2px 2px 6px 0px #888888!important;
+  background: inherit;
+  font-family: 'Lato', sans-serif!important;
+  height: 57vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 1550px){
+.grider {
+  box-shadow: 2px 2px 6px 0px #888888!important;
+  background: inherit;
+  font-family: 'Lato', sans-serif!important;
+  height: 77vh;
+}
+}
+
+.button-row .mat-button-base {
+  margin: 48px 48px 48px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.measurements {
+  min-width: 25vw;
+  height: 7.5vh;
+}
+
+.measurements:hover {
+  background-color:black;
+  color: #7CFC00;
+}
+

@@ -1,0 +1,15 @@
+<hr>
+<mat-list-item class="mt-4" *ngIf="campInfo">
+  <div class="col-6">
+    <p>{{campInfo.address}}</p>
+  </div>
+  <div class="col-4" style="margin-left: 20px;">
+    <p>{{campInfo.patient}}</p>
+  </div>
+  <div class="col-2">
+    <button class="measurements" mat-button type="button"
+    (click)="allRequests()">Requests
+    </button>
+  </div>
+</mat-list-item>
+<hr>

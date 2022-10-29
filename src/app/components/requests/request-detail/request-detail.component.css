@@ -1,0 +1,61 @@
+mat-nav-list {
+  min-width: 68vw;
+}
+
+h4 {
+  text-decoration: underline;
+  font-size: 1.25em;
+  padding: 1rem;
+  text-align: center;
+}
+
+.detail-tbl {
+  overflow: hidden;
+  width: 800px;
+}
+
+p  {
+	padding: 10px;
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+}
+
+.measurements:hover {
+  background-color:black;
+  color: #7CFC00;
+}
+
+.measurements,
+.delete {
+  font-size: 14px;
+}
+
+.delete:hover {
+  background-color:black;
+  color: red;
+}
+
+.approveBtn {
+  margin-left: 8.3vw;
+}
+
+.deleteBtn {
+  margin-left: 8.3vw;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.values {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 1800px) {
+  .delete {
+    margin-left: -3.75vw;
+  }
+}

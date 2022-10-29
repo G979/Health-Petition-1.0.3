@@ -1,0 +1,19 @@
+<h4>Welcome,  {{role}}</h4>
+<section class="grider" *ngIf="role">
+  <div class="button-row">
+    <div class="flex-container">
+      <div class="button-container">
+        <button class="measurements" mat-button
+        routerLink="/campaigns" type="button">
+          <mat-icon style="margin-right:1vw">person</mat-icon>Campaigns<mat-icon style="margin-left:1vw" class="actions">person</mat-icon>
+        </button>
+      </div>
+      <div class="button-container">
+        <button class="measurements" mat-button
+        routerLink="/users" type="button">
+          <mat-icon style="margin-right:1vw">list</mat-icon>Users<mat-icon style="margin-left:1vw" class="actions">list</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

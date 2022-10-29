@@ -1,0 +1,34 @@
+<div class="inputer">
+  <mat-form-field>
+      <div class="fileControl-wrapper">
+        <mat-toolbar>
+          <input
+          matInput
+          id="ngmodel"
+          [(ngModel)]="uploadFileName"
+          readonly name="File" />
+        </mat-toolbar>
+        <input
+        type="file"
+        #uploadControl
+        id="fileControlInput"
+        (change)="onFileChange($event)"
+        name="fileControlInput"
+        multiple="multiple"
+        accept="image/*, application/pdf" />
+      </div>
+    </mat-form-field>
+    <button matTooltip="Send File" matTooltipHideDelay="10"
+    matTooltipPosition='below' class="tab-btns" id="submit"
+    (click)="submitImg()" type="button">
+      <mat-icon class="icon2">done</mat-icon>
+    </button>
+    <button matTooltip="Clear Input" matTooltipHideDelay="10"
+    matTooltipPosition='below' class="tab-btns" id="clear"
+    (click)="reset()" type="button">
+      <mat-icon class="icon2">format_clear</mat-icon>
+    </button>
+</div>
+<div class="inputer" *ngIf="request.downloadUrl !== '' ">
+  <a href="url" id="url" >{{request.downloadUrl}}</a>
+</div>

@@ -1,0 +1,8 @@
+.measurements:hover {
+  background-color:black;
+  color: #7CFC00;
+}
+
+mat-list-item {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

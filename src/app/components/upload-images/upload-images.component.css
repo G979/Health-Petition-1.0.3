@@ -1,0 +1,77 @@
+.fileControl-wrapper .mat-toolbar-single-row {
+  height: auto !important;
+  background: transparent;
+}
+.fileControl-wrapper .mat-toolbar-single-row button {
+  width: 40%;
+  text-align: center;
+}
+
+mat-form-field {
+  margin-left: 7vw;
+}
+
+#fileControlInput {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+#submit {
+  margin-left: 5vw;
+}
+
+.tab-btns, .tab-btns[disabled]:hover {
+  width: 45px;
+  height: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px!important;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.tab-btns:hover {
+  background-color: #c41230;
+  box-shadow: 0px 15px 20px white;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+#submit:hover {
+  background-color: green;
+}
+
+.icon2 {
+  margin: 0.1em;
+}
+
+p {
+  font-family: 'Roboto Condenced', sans-serif;
+  font-size: 7px;
+}
+
+#ngmodel {
+  font-size: 14px;
+}
+
+.inputer {
+  margin-top:1vh;
+}
+
+#url {
+  font-size: 12px;
+}
